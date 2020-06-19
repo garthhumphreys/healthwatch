@@ -23,7 +23,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: 'HealthWatch tracks Corona virus, Cold, Flu and other illnesses in the Cayman Islands',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
