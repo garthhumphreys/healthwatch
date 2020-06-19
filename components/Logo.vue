@@ -1,6 +1,12 @@
 <template>
   <div>
-    <img class="NuxtLogo" src="../static/hw-logo.svg" height="107" width="517" />
+    <b-container>
+      <b-row>
+        <b-col>
+          <b-img class="NuxtLogo" fluid-grow src="../static/hw-logo.svg" ></b-img>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 <style>
