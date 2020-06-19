@@ -1,4 +1,11 @@
+import redirectSSL from 'redirect-ssl'
+
 export default {
+  serverMiddleware: [
+    redirectSSL.create({
+    enabled: process.env.NODE_ENV === 'production'
+     }),
+  ],
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
