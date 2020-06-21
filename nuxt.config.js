@@ -43,9 +43,6 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    ['@nuxtjs/google-analytics', {
-      id: 'G-ZRW2RVNS78'
-    }]
   ],
   /*
    ** Nuxt.js modules
@@ -55,7 +52,21 @@ export default {
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/google-gtag',
   ],
+  'google-gtag': {
+    id: 'G-ZRW2RVNS78',
+    config: {
+      anonymize_ip: true, // anonymize IP
+      send_page_view: false, // might be necessary to avoid duplicated page track on page reload
+      linker: {
+        domains: ['healthwatch.ky']
+      }
+    },
+    debug: true, // enable to track in dev mode
+    disableAutoPageTrack: false, // disable if you don't want to track each page route with router.afterEach(...).
+    additionalAccounts: []
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
